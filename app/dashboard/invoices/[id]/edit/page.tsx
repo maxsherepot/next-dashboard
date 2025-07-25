@@ -12,19 +12,18 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
     ]);
 
     return (
-        1
-        // <main>
-        //     <Breadcrumbs
-        //         breadcrumbs={[
-        //             { label: 'Invoices', href: '/dashboard/invoices' },
-        //             {
-        //                 label: 'Edit Invoice',
-        //                 href: `/dashboard/invoices/${id}/edit`,
-        //                 active: true,
-        //             },
-        //         ]}
-        //     />
-        //     <Form invoice={invoice} customers={customers} />
-        // </main>
+        <main>
+            <Breadcrumbs
+                breadcrumbs={[
+                    { label: 'Invoices', href: '/dashboard/invoices' },
+                    {
+                        label: 'Edit Invoice',
+                        href: `/dashboard/invoices/${id}/edit`,
+                        active: true,
+                    },
+                ]}
+            />
+            <Form invoice={invoice} customers={customers} />
+        </main>
     );
 }
